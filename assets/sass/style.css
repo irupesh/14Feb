@@ -4396,6 +4396,9 @@ a.ui-button:active, .ui-button:active,
     margin-top: 20px;
   }
 }
+.extra-space {
+  display: none;
+}
 
 @media (max-width: 991px) {
   .static-hero .wpo-wedding-date,
@@ -4403,15 +4406,13 @@ a.ui-button:active, .ui-button:active,
   .static-hero-s3 .wpo-wedding-date,
   .static-hero-s5 .wpo-wedding-date,
   .static-hero-s10 .wpo-wedding-date {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: 0;
+    display: none;
+  }
+  .extra-space {
+    display: block;
   }
 }
+
 
 .static-hero .wpo-wedding-date #clock,
 .static-hero .wpo-wedding-date #clock3,
@@ -5847,13 +5848,21 @@ a.ui-button:active, .ui-button:active,
   .static-hero-s5 .top-left-decoration {
     display: block;
     }
+  
+    .static-hero-s5 .top-bottom-left-decoration {
+      display: block;
+      }
+
+      .static-hero-s5 .top-bottom-right-decoration {
+        display: block;
+        }
 
 }
 
 .top-right-decoration {
 	position: absolute;
-	top: 0px;
-	right: 0px;
+	top: 0;
+	right: 0;
   max-width: 50%;
   max-height: 50%;
 	display: none;
@@ -5862,6 +5871,24 @@ a.ui-button:active, .ui-button:active,
 .top-left-decoration {
 	position: absolute;
 	top: 0;
+	left: 0;
+  max-width: 50%;
+  max-height: 50%;
+	display: none;
+}
+
+.top-bottom-right-decoration {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+  max-width: 50%;
+  max-height: 50%;
+	display: none;
+}
+
+.top-bottom-left-decoration {
+	position: absolute;
+	bottom: 0;
 	left: 0;
   max-width: 50%;
   max-height: 50%;
@@ -5913,7 +5940,7 @@ a.ui-button:active, .ui-button:active,
 @media (max-width: 991px) {
   .static-hero-s5 .wpo-static-hero-inner {
     margin: 0 auto;
-    padding: 40px 0;
+    padding: inherit;
   }
 }
 
