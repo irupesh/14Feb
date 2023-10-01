@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="wpOceans">
+    <meta name="author" content="Rupesh and Heer">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
     <title>HeerWedsRupesh</title>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
@@ -516,6 +516,10 @@
         </footer>
         <!-- end of wpo-site-footer-section -->
 
+        <div class="music">
+            <audio src="assets/mp3/song.mp3" id="my_audio" loop="loop"></audio> 
+        </div>
+
     </div>
     <!-- end of page-wrapper -->
 
@@ -533,6 +537,13 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/jquery-sakura.min.js"></script>
 <script>
+    console.log('script called');
+
+    $(document).on('click', function(){
+    document.getElementById("my_audio").play();
+    console.log('Shaadi me zaroor aana');
+});
+    
     // domReady
     $(function() {
         $('body').sakura();
@@ -541,7 +552,11 @@
     // windowLoad
     $(window).load(function() {
         $('body').sakura();
+        console.log('Sakura running');
     });
+
+    console.log('script called');
+
 </script>
 </body>
 
