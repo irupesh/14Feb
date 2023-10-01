@@ -25,6 +25,7 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/jquery-ui.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" media="screen" href="assets/css/jquery-sakura.min.css" />
 </head>
 
 <body>
@@ -530,6 +531,18 @@
     <script src="assets/js/tilt.jquery.min.js"></script>
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery-sakura.min.js"></script>
+<script>
+    // domReady
+    $(function() {
+        $('body').sakura();
+    });
+
+    // windowLoad
+    $(window).load(function() {
+        $('body').sakura();
+    });
+</script>
 </body>
 
 </html>
