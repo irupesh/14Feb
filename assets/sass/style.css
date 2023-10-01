@@ -407,6 +407,24 @@ img {
   -webkit-animation: rotating 5s alternate infinite;
   animation: rotating 5s alternate infinite;
 }
+/*** back to top **/
+.play-btn {
+  background-color: rgba(101, 113, 80, 0.7);
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border: 2px solid #657150;
+  border-radius: 45px;
+  text-align: center;
+  display: inline-block;
+  position: fixed;
+  z-index: 999;
+  right: 15px;
+  bottom: 65px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
 
 /*** back to top **/
 .back-to-top {
@@ -427,7 +445,7 @@ img {
 }
 
 @media (max-width: 991px) {
-  .back-to-top {
+  .back-to-top .play-btn {
     width: 35px;
     height: 35px;
     line-height: 35px;
@@ -439,6 +457,21 @@ img {
 }
 
 .back-to-top i {
+  font-size: 18px;
+  font-size: 1.2rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.play-btn:hover {
+  background-color: #657150;
+}
+
+.play-btn i {
   font-size: 18px;
   font-size: 1.2rem;
   color: #fff;

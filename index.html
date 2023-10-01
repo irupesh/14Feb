@@ -29,7 +29,9 @@
 </head>
 
 <body>
-
+    <div class="play-btn" onclick="PlayMusic()">
+        <i id="play-music" class="ti-control-play" ></i>
+    </div>
     <!-- start page-wrapper -->
     <div class="page-wrapper">
         <!-- start preloader -->
@@ -490,11 +492,6 @@
                     </div>
                 </div> <!-- end container -->
             </div>
-
-
-
-
-
             <div class="wpo-lower-footer">
                 <div class="container">
                     <div class="row">
@@ -537,12 +534,25 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/jquery-sakura.min.js"></script>
 <script>
-    console.log('script called');
+    var is_playing = false;
+    $(document).one("click", function () {
+        document.getElementById("my_audio").play();
+            is_playing = true;
+            document.getElementById("play-music").className = "ti-control-pause";
+    });
 
-    $(document).on('click', function(){
-    document.getElementById("my_audio").play();
+    function PlayMusic(){
+        if (!is_playing) {
+            document.getElementById("my_audio").play();
+            is_playing = true;
+            document.getElementById("play-music").className = "ti-control-pause";
+        } else {
+            document.getElementById("my_audio").pause();
+            is_playing = false;
+            document.getElementById("play-music").className = "ti-control-play";
+        }
     console.log('Shaadi me zaroor aana');
-});
+    }
     
     // domReady
     $(function() {
