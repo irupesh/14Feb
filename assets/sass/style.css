@@ -2456,9 +2456,9 @@ a.ui-button:active, .ui-button:active,
 
 @media (max-width: 450px) {
   .wpo-site-header .header-right .cart-toggle-btn {
-    display: none;
+    /*display: none;*/
   }
-}
+  }
 
 .wpo-site-header .header-right .search-toggle-btn,
 .wpo-site-header .header-right .cart-toggle-btn {
@@ -2675,7 +2675,6 @@ a.ui-button:active, .ui-button:active,
 .mini-cart-content .mini-cart-item-image {
   width: 50px;
   height: 50px;
-  border: 2px solid #f3f3f3;
   float: left;
   margin-right: 15px;
 }
